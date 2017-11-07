@@ -3,3 +3,7 @@
 * Indentation
 * Check des balises manquantes 
 * yolo
+
+## Erreurs html
+* 
+

@@ -3,3 +3,5 @@
 * Indentation
 * Check des balises manquantes 
 
+## Erreurs html
+* 

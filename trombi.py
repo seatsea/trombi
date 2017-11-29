@@ -13,7 +13,7 @@ list_c = parse_csv(src_csv) # Prend le csv et retourne une liste
 
 list_m = merge_list(list_h,list_c) # Regroupe les deux listes par noms
 
-groups = scan_groups(list_m)
+groups = scan_groups(list_c)
 
 for g in groups:
     pass

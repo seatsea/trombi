@@ -7,5 +7,3 @@ def parse_csv(file):								# Définition de la fonction
 	
 	for i in lignes :								# Définition de la boocle 
 		liste_e+=lignes
-									
-	

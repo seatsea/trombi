@@ -11,7 +11,4 @@ def parse_csv(file):  # Définition de la fonction
     for i in range(0,len(liste_e)):
         liste_e[i] = liste_e[i][0:3]
 
-    print(liste_e)
-
-
-parse_csv("rt2.csv")
+    return liste_e

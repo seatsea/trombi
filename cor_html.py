@@ -1,9 +1,6 @@
 # !/usr/bin/python3
 # -*- coding: utf-8 -*-
 
-import os
-
-
 def correction(file_o):
     file_split = file_o.split(".")  # Modification du nom du fichier pour que le fichier corrigé soit de la forme *_correct.html
     file_split[-2] += "_correct"

@@ -9,8 +9,7 @@ def parse_csv(file):  # Définition de la fonction
     liste_e = []  # Définition de la liste que l'on va remplir avec le for qui suit
     liste_e += lignes
 
-    for i in range(0,len(liste_e)):
+    for i in range(0, len(liste_e)):
         liste_e[i] = liste_e[i][0:3]
 
     return liste_e
-

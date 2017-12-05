@@ -9,7 +9,6 @@ def construct_index(list_grp):
         print(code)
         file_init.write(code+'\n')
 
-
     file_init.write('</body></html>')
     file_init.close()
 

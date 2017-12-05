@@ -14,5 +14,6 @@ list_m = merge_list(list_h,list_c) # Regroupe les deux listes par noms
 
 groups = scan_groups(list_c)
 
+gen_index(groups)
+
 for g in groups:
-    pass

@@ -5,22 +5,18 @@ Utilise html parse
 Crée une liste de liste avec nom;prenom;lien image
 
 """
-import os
 
 from bs4 import BeautifulSoup
 
 
-def parse_html(file_h):
-    opening = open(file_h, "r")
-    soup = BeautifulSoup(opening, "html.parser")
+def parse_html(file_h):													# Définition de la fonction
+    opening = open(file_h, "r")											# Ouverture du fichier en mode read
+    soup = BeautifulSoup(opening, "html.parser")							# Utilisation du parser html via Beautifulsoup
     a = soup.find_all("td", valign="top", width="16%", align="center")
-    liste = []
-    personne = []
+    liste_user = []
+    for user in a:
+        nom = (user.get_text()).replace('\r', '').replace('\n', '')
+        image = user.find("img").get('src')
+        liste_user.append([nom,image])
 
-    for td in a:
-        print(td)
-
-        liste += personne
-
-
-parse_html('M3206.html')
+    return liste_user

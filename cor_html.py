@@ -20,7 +20,7 @@ def correction(file_o):
                             "<td valign=\"middle\"")  # remplacement des erreurs dans le fichier html
         contenu = contenu + line
 
-    f_c = open(file_c,'w')  # ouverture du fichier corrigé en écriture pour inscrire l'ensemble du contenu du fichier original
+    f_c = open(file_c, "w")  # ouverture du fichier corrigé en écriture pour inscrire l'ensemble du contenu du fichier original
     f_c.write(contenu)  # Remplacement des éléments corrigés
     f_c.close()  # fermer le fichier
 

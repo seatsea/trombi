@@ -1,10 +1,8 @@
 # !/usr/bin/python3
 # -*- coding: utf-8 -*-
+from bs4 import BeautifulSoup
 
-import os
-
-
-def correction(file_o):
+def cor_html(file_o):
     file_split = file_o.split(".")  # Modification du nom du fichier pour que le fichier corrigé soit de la forme *_correct.html
     file_split[-2] += "_correct"
     file_c = ".".join(file_split)
@@ -25,4 +23,14 @@ def correction(file_o):
     f_c.close()  # fermer le fichier
 
 
-correction("trombinos.unice.fr.html")  # appel de la fonction pour le fichier trombinos.unice.fr.html
+def parse_html(file_h):													# Définition de la fonction
+    opening = open(file_h, "r")											# Ouverture du fichier en mode read
+    soup = BeautifulSoup(opening, "html.parser")							# Utilisation du parser html via Beautifulsoup
+    a = soup.find_all("td", valign="top", width="16%", align="center")
+    liste_user = []
+    for user in a:
+        nom = (user.get_text()).replace('\r', '').replace('\n', '')  # Prend juste le texte et enlelve les espaces blancs
+        image = user.find("img").get('src')
+        liste_user.append([nom,image])
+
+    return liste_user

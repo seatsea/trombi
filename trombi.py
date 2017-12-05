@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-from cor_html import cor_html
-from parse_html import parse_html
+from fonct_html import *
 
 src_html = "index.html"  # Nom du fichier html a scanner
 src_csv = "rt2.csv"  # Nom du CSV

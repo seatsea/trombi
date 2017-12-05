@@ -12,4 +12,11 @@ def parse_csv(file):  # Définition de la fonction
     for i in range(0, len(liste_e)):
         liste_e[i] = liste_e[i][0:3]
 
-    return liste_e
+    #print(liste_e)
+    dico = {}
+    for i in liste_e:
+        dico[i[1] + ' ' + i[0]] = i[2]
+
+    return dico
+
+print(parse_csv('rt2.csv'))

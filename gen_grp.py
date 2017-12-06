@@ -4,9 +4,9 @@
 def construct_grp(grp,list_personne):
 
     file_init = open("%s.html" %(grp), 'w')
-    file_init.write('<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Groupe ' + grp + '"</title></head><body><p>Page du Groupe ' + grp + ' </p><table width = "100%">' + "\n")
+    file_init.write('<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Groupe ' + grp + '"</title></head><body><p>Page du Groupe ' + grp + ' </p><table width = "100%"><tbody> <tr> ' + "\n")
     for personne in list_personne:
-            file_init.write('<tbody> <tr> <td width = "16%" valign = "top" align = "center" ><img src = "/' + personne[1] + '" width = "120" height = "160&quot;" > <br> ' + personne[0] + ' </td> <td width = "16%" valign = "top" align  "center" ></tr></tbody></table></body></html>' "\n")
+            file_init.write('<td width = "16%" valign = "top" align = "center" ><img src = "/' + personne[1] + '" width = "120" height = "160&quot;" > <br> ' + personne[0] + ' </td> <td width = "16%" valign = "top" align  "center" ></tr></tbody></table></body></html>' "\n")
 
     file_init.write()
     file_init.close()

@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 from fonct_html import *
-from parse_csv import parse_csv
+from gen_grp import construct_grp
 from gen_index import gen_index
-# from gen_grp import construct_grp
+from parse_csv import parse_csv
 
 src_csv = "rt2.csv"  # Nom du CSV
 
@@ -36,7 +36,7 @@ for i in groups:
                 if list_h[x][0] == list_c[n][0]:
                     users_group.append(list_h[x])
     print(users_group)
-    # construct_grp(i,users_group)
+    construct_grp(i,users_group)
 
 
 gen_index(groups)

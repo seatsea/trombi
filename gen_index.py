@@ -2,7 +2,6 @@
 #-*- coding: utf-8 -*-
 
 def gen_index(list_grp):
-    print(list_grp)
     file_init = open("index.html",'w')
     file_init.write('<html><head><meta http-equiv=\"content-type\" content=\"text/html; charset=UTF-8\"></head><body>'+'\n')
     for i in list_grp:

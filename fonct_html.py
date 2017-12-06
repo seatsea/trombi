@@ -1,11 +1,22 @@
 # !/usr/bin/python3
 # -*- coding: utf-8 -*-
-from bs4 import BeautifulSoup
 from getpass import getpass
+
+from bs4 import BeautifulSoup
 from robobrowser import RoboBrowser
 
+
+def test_login_url_helper():
+    client = cas.CASClientBase(
+                        renew=False,
+                        extra_login_params=False,
+                        server_url='http://www.example.com/cas/',
+                        service_url='http://testserver/'
+                    )
+    actual = client.get_login_url()
+    expected = 'http://www.example.com/cas/login?service=http%3A%2F%2Ftestserver%2F'
+
 def dl_src():
-    """ Retourne le code source du trombino (http://iutsa.unice.fr/~mgautero/ext/M3206/trombino) """
 
     browser = RoboBrowser(parser='html.parser')
     browser.open(str(input("Saissisez l'URL de la page (http://iutsa.unice.fr/~mgautero/ext/M3206/trombino): ")))

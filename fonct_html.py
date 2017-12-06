@@ -51,5 +51,3 @@ def parse_html(file_h):													# Définition de la fonction
         liste_user.append([nom,image])
 
     return liste_user
-
-dl_src()

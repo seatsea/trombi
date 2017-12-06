@@ -14,4 +14,3 @@ def parse_csv(file):  # Définition de la fonction
         liste_user.append([liste_e[i][1] + ' ' + liste_e[i][0],liste_e[i][2]])
 
     return liste_user
-print(parse_csv('rt2.csv'))

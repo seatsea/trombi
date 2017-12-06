@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 from getpass import getpass
 
+import cas
 from bs4 import BeautifulSoup
 from robobrowser import RoboBrowser
 

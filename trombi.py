@@ -35,7 +35,7 @@ for i in groups:
             for x in range(0,len(list_h)):
                 if list_h[x][0] == list_c[n][0]:
                     users_group.append(list_h[x])
-    print(users_group)
+
     construct_grp(i,users_group)
 
 

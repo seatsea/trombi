@@ -1,6 +1,22 @@
 # !/usr/bin/python3
 # -*- coding: utf-8 -*-
 from bs4 import BeautifulSoup
+from getpass import getpass
+from robobrowser import RoboBrowser
+
+def dl_src():
+    """ Retourne le code source du trombino (http://iutsa.unice.fr/~mgautero/ext/M3206/trombino) """
+
+    browser = RoboBrowser(parser='html.parser')
+    browser.open(str(input("Saissisez l'URL de la page (http://iutsa.unice.fr/~mgautero/ext/M3206/trombino): ")))
+
+    form = browser.get_form()
+    form['username'].value = str(input("Saissisez votre identifiant: "))
+    form['password'].value =str(getpass("Saissisez votre mot de pass: "))
+    browser.submit_form(form)
+    out = open('dl.html', 'w')
+    out.write(browser.parsed)
+    out.close()
 
 def cor_html(file_o):
     file_split = file_o.split(".")  # Modification du nom du fichier pour que le fichier corrigé soit de la forme *_correct.html
@@ -22,6 +38,7 @@ def cor_html(file_o):
     f_c.write(contenu)  # Remplacement des éléments corrigés
     f_c.close()  # fermer le fichier
 
+    return file_c
 
 def parse_html(file_h):													# Définition de la fonction
     opening = open(file_h, "r")											# Ouverture du fichier en mode read
@@ -34,3 +51,5 @@ def parse_html(file_h):													# Définition de la fonction
         liste_user.append([nom,image])
 
     return liste_user
+
+dl_src()

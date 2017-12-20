@@ -10,7 +10,7 @@ def parse_csv(file):  # Définition de la fonction
     liste_e += lignes
     liste_user =[]
 
-    for i in range(0, len(liste_e)):
+    for i in range(0, len(liste_e)): # Prend les noms, prenoms et groupes pour le metre dans une liste
         liste_user.append([liste_e[i][1] + ' ' + liste_e[i][0],liste_e[i][2]])
 
     return liste_user

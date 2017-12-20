@@ -59,7 +59,7 @@ def parse_html(file_h):													# Définition de la fonction
     liste_user = []
     for user in a:
         nom = (user.get_text()).replace('\r', '').replace('\n', '')  # Prend juste le texte et enlelve les espaces blancs
-        image = user.find("img").get('src')
+        image = user.find("img").get('src') # Prend la source des image
         liste_user.append([nom,image])
 
     return liste_user

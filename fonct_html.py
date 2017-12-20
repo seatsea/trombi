@@ -17,7 +17,7 @@ def test_login_url_helper():
     actual = client.get_login_url()
     expected = 'http://www.example.com/cas/login?service=http%3A%2F%2Ftestserver%2F'
 
-def dl_src():
+def dl_src(): # fonction servant à acceder à une page en pré remplissant l'identifiant et le mot de passe demandé
 
     browser = RoboBrowser(parser='html.parser')
     browser.open(str(input("Saissisez l'URL de la page (http://iutsa.unice.fr/~mgautero/ext/M3206/trombino): ")))

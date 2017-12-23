@@ -28,8 +28,8 @@ def dl_src(): # fonction servant à acceder à une page en pré remplissant l'id
     browser.submit_form(form)
     out = open('dl.html', 'w')
     out.write(browser.parsed)
-    out.close()
 
+    out.close()
 def cor_html(file_o):
     file_split = file_o.split(".")  # Modification du nom du fichier pour que le fichier corrigé soit de la forme *_correct.html
     file_split[-2] += "_correct"
